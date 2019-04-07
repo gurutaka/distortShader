@@ -32,8 +32,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Brightness: 5
     - _DistortAmount: 0.0288
     - _Shininess: 0.468
-    - _Speed: 0.316
+    - _Speed: 0.737
     m_Colors:
     - _Color: {r: 0.46262014, g: 0.8679245, b: 0.80107015, a: 1}

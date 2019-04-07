@@ -6,9 +6,9 @@
         _Speed("Speed", Range(0, 1)) = 0.7
         _NormalMap ("Normal map", 2D) = "bump" {}
         _MainTex("Main", 2D) = "white" {}
-        _NoiseTex("Noise", 2D) = "white" {}
         _DistortAmount("DistortAmount", Range(0, 0.05)) = 0.025
         _Shininess ("Shininess", Range(0.0, 1.0))  = 0.078125
+        _Brightness("Brightness", Range(1, 10)) = 5
         _Color ("Color", Color) = (1, 1, 1, 1)
     }
     SubShader
@@ -46,9 +46,7 @@
             sampler2D _NormalMap;
             half4 _LightColor0;
             half _Shininess;
-
-            sampler2D _SurfaceCutOffTex;
-            float _SurfaceNoiseCutoff;
+            float _Brightness;
             fixed4 _Color;
             float _Speed;
             float _DistortAmount;
@@ -79,8 +77,8 @@
                 fixed4 col = tex2D(_MainTex,i.uv);
 
                 half3 diffuse = max(0, dot(normal, i.lightDir)) * _LightColor0.rgb;
-                half3 specular = pow(max(0, dot(normal, halfDir)), _Shininess * 100.0) * _LightColor0.rgb;
-                col.rgb =col.rgb * diffuse * 10 + specular;
+                half3 specular = pow(max(0, dot(normal, halfDir)), _Shininess * 128.0) * _LightColor0.rgb;
+                col.rgb =col.rgb * diffuse * _Brightness + specular;
                 return col * _Color;
 
 
