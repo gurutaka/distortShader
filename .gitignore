@@ -1,0 +1,46 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+Unity/iosBuild/
+Node/_config.json
+Node/photo_cmyk_dpi300_871
+Node/qr_cmyk_dpi300_212
+Node/printout
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+# ============ #
+# for others   #
+# ============ #
+*.log #log files, for some plugins
+*.pyc #python bytecode cache, for some plugins.
+sysinfo.txt #Unity3D Generated File On Crash Reports
+node_modules
+_builds
+.vs
