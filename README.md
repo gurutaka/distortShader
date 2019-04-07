@@ -1,12 +1,11 @@
-# FresnelSeaShader
+# DistortShader
 
-<img width="311" alt="photo" src="https://user-images.githubusercontent.com/44670044/54195919-45d02c80-4503-11e9-89f0-310f6290dc26.png">
+![distort3](https://user-images.githubusercontent.com/44670044/55685272-150ed600-598f-11e9-932c-a32f333622e0.gif)
 
 ## Unity Version
 
 - Unity：2018.3.8
 
-## How to use
+## 開設記事
 
-1. set two normal map texture
-1. set parameters of speed, fresnel depth, and shininess
+[【Unity】テクスチャをシンプルに歪ませる shader の作成方法](https://qiita.com/guru_taka/items/c0292fd25b4e739816b6)
