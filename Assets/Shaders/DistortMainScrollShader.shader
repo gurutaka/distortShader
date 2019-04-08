@@ -53,6 +53,7 @@ Shader "Custom/DistortMainScrollShader"
             fixed4 frag (v2f i) : SV_Target
             {
                 float4 uvNoise= 2 * tex2D(_NoiseTex, i.uv) - 1;//0 - 1座標を-1 - 1に変換
+                i.uv.x += uvNoise.x * _NoiseAmount;
                 i.uv.y += _Time.x * _Speed + uvNoise.y * _NoiseAmount;
                 fixed4 col = tex2D(_MainTex,i.uv) * _Color *  _Brightness;;
                 return col;

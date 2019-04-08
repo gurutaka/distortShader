@@ -55,7 +55,7 @@
                 float2 nUv = i.uv;
                 nUv.y += _Time.x * _Speed;
                 float4 uvNoise= 2 * tex2D(_NoiseTex, nUv) -1 ;
-                i.uv.xy += uvNoise.xy * _NoiseAmount;
+                i.uv += uvNoise.xy * _NoiseAmount;
                 fixed4 col = tex2D(_MainTex,i.uv);
                 return col * _Color * _Brightness;
             }
